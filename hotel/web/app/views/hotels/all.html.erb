@@ -1,0 +1,26 @@
+<h1>All Hotels</h1>
+<%= 
+  link_to 'Home', {
+    :controller => "hotels",
+    :action => "index"
+  }, :method => :get
+%>
+<div class="entries">
+  <% if @results.any? %>
+    <% @results.each do |hotel| %>
+      <%= render 'hotels/partial_hotel', :hotel => hotel %>
+    <% end %>
+  <% else %>
+    <p>No hotels</p>
+  <% end %>
+</div>
+<div class="links">
+  <div class="link">
+    <%= 
+      link_to 'Create Hotel', {
+        :controller => "hotels",
+        :action => "add"
+      }
+    %>
+  </div>
+</div>

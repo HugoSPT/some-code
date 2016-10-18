@@ -1,0 +1,33 @@
+<h1>Hotels</h1>
+<div class="search">
+  <%= form_tag "#", :onSubmit => "return false" do %>
+    <%= text_field_tag(:search_term, nil, {:placeholder => 'Search (min. 3 chars)'}) %>
+  <% end %>
+  <div class="links">
+    <div class="link">
+      <%= 
+        link_to 'See All Hotels', {
+          :controller => "hotels",
+          :action => "all"
+        }, :method => :get
+      %>
+    </div>
+    <div class="link">
+      <%= 
+        link_to 'Create Hotel', {
+          :controller => "hotels",
+          :action => "add"
+        }, :method => :get
+      %>
+    </div>
+  </div>
+  <div class="results">
+    <div class="matches" hidden>
+      <h2>Results</h2>
+        <div class="entries"></div>
+    </div>
+    <div class="no-suggestions" hidden><p>No results</p></div>
+    <div class="loading" hidden><p>Loading...</p></div>
+    <div class="api-error" hidden><p>API not available</p></div>
+  </div>
+</div>
