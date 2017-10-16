@@ -1,0 +1,43 @@
+h1 {
+    padding-bottom: 20px;
+}
+#container {
+    margin-left: 50px;
+}
+
+#container > div {
+    width: 50%;
+    margin: 0 auto auto;
+}
+
+#search_term {
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.links {
+    width: 50%;
+    margin: 0 auto auto;
+    height: 50px;
+}
+
+.link {
+    float: left;
+    margin: 10px 10px 10px 0px;
+    padding: 2px 2px 2px 2px;
+    border:1px solid black;
+    border-color: #428bca;
+    font-size: 20px;
+}
+.results {
+    width: 500px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-size: 16px;
+    float: left;
+}
+
+.no-suggestions {
+    font-size: 20px;
+    text-align: center;
+}

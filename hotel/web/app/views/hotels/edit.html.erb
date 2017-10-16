@@ -1,0 +1,12 @@
+<h1>Edit</h1>
+<%= 
+  link_to 'Home', {
+    :controller => "hotels",
+    :action => "index"
+  }, :method => :get
+%>
+<% @hotels.each do |hotel| %>
+  <%= 
+    render 'hotels/edit_form', :hotel => hotel, :accommodations => @accommodations, :stars => @stars
+  %>
+<% end %>
