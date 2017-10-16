@@ -1,4 +1,0 @@
-Flask
-Flask-SQLAlchemy==1.0
-mysqlclient==1.3.9
-ConfigParser==3.5
